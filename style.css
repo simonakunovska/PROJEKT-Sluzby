@@ -43,12 +43,12 @@ h2{
 
 /* Sekce traveler */
  .traveler{
-   /* display:grid; */
+   
    display:flex;
    flex-direction:column;
     align-items:center;
     text-align:center;
-    margin:60px 0 60px 0;/* chci trochu odsadit obrazek */
+    margin:60px 0 60px 0;
  }
 
  .traveler img{
@@ -95,7 +95,8 @@ h2{
 }
 
 /* Sekce služby */
-.sluzby{
+.sluzby,
+.sluzbydve{
     text-align:center;
    
    display:flex;
@@ -128,8 +129,6 @@ h2{
 
 .sluzbytlacitka{
     margin:28px; 
-   /* justify-self:center; */
-    /* vypada to ze sluzby tlacitka vubec neni, obecne nutne upravit mezery mezi sekcemi */
 }
 
 .sluzbytlacitka img{
@@ -139,7 +138,7 @@ h2{
 }
 
 p{
-    width:550px;
+    width:460px;
 }
 
 
@@ -157,7 +156,9 @@ p{
       
     }
 
-}
+
+
+
 
 .sluzbytlacitka{
     display:flex;
@@ -169,10 +170,10 @@ p{
 .sluzbytlacitka .druha,
 .sluzbytlacitka .treti{
 
-    margin-right:20px;
-    
-    height:172px;
-    width:230px;
+    flex-grow: 1; 
+  margin-right: 20px; 
+  width: calc(33.33% - 10px); 
+  height:172px;
 }
 
 .sluzbytlacitka .treti{
@@ -187,18 +188,115 @@ p{
     justify-content:space-between;
     }
 
+    p{
+        width:550px;
+        
+    }
+   
+}
+
 
     @media(min-width:1100px){
         .traveler{
            
             display:flex;
-            flex-direction:row;
+            flex-direction:row-reverse;
             
+            text-align:left;
             
 
-    }}
+
+    }
+
+    
+
+    .traveler p {
+        width:490px;
+    }
+
+.buttontraveler {
+    justify-content:flex-start;
+}
+
 
     .sluzby{
         display:flex;
-        flex-direction:row;
+        flex-direction:row-reverse;
+        
     }
+
+    
+    .sluzbydve{
+        display:flex;
+       flex-direction:row;
+      
+    }
+
+    .levasluzby,
+    .pravasluzby{
+        text-align:left;
+        width: calc((490px * 2) + 60px);
+       
+       
+    }
+    
+
+.levasluzby{
+    margin-right:60px;
+}
+    
+
+    .sluzbytlacitka .prvni,
+.sluzbytlacitka .druha,
+.sluzbytlacitka .treti{
+
+    margin-right:20px;
+    
+    height:191px;
+    width:170px;
+    text-align:center;
+}
+
+.sluzbytlacitka{
+    width:550px;
+    margin: 40px 0;
+}
+
+.container{
+    width:1040px;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    flex-direction:column;
+    
+}
+
+
+
+.sluzby p,
+.sluzbydve p{
+    width:430px;
+}
+
+.levapulka,
+.pravapulka{
+    width: calc((490px * 2) + 60px);
+    flex: 1;
+   
+    
+}
+
+.pravapulka{
+     
+    align-items: center; 
+    width: calc((490px * 2) + 60px);
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.pravapulka img{
+    max-width:425px;
+    
+}
+}
