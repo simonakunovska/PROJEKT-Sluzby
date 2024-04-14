@@ -43,12 +43,19 @@ h2{
 
 /* Sekce traveler */
  .traveler{
-    
+   /* display:grid; */
+   display:flex;
+   flex-direction:column;
+    align-items:center;
     text-align:center;
     margin:60px 0 60px 0;/* chci trochu odsadit obrazek */
  }
 
+ .traveler img{
+ width:350px;
+ height:290.5px;
  
+ }
 
  .button{
     font-family: "Montserrat", sans-serif;
@@ -71,6 +78,9 @@ h2{
   
 }
 
+
+
+
 .modre{
     background-color:#407BFF;
     width:195px;
@@ -81,14 +91,16 @@ h2{
 .sede{
     background-color:#8B8B8B;
     width:221px;
+    
 }
 
 /* Sekce služby */
 .sluzby{
     text-align:center;
-    margin:60px 0 60px 0;/* chci trochu odsadit obrazek */
-    display: flex;
+   
+   display:flex;
     flex-direction: column;
+    align-items:center;
     
 }
 .sluzbytlacitka .prvni,
@@ -102,12 +114,12 @@ h2{
 	color:#8B8B8B;
     background-color:#FFFFFF;
     border-radius:10px;
-    box-shadow: 0px 4px 6px #407BFF1F(64, 123, 255, 0.1);  /*  spatny stinbecne nutne upravit mezery mezi sekcemi */
+  
+    box-shadow: 0px 4px 6px rgba(64, 123, 255, 0.1);
 
     margin-bottom:15px;
     padding: 32px 20px;
     display:flex;
-    justify-content:center;
     align-items:center;
     width:460px;
     height:80px;
@@ -116,11 +128,77 @@ h2{
 
 .sluzbytlacitka{
     margin:28px; 
-    justify-content:center;
+   /* justify-self:center; */
     /* vypada to ze sluzby tlacitka vubec neni, obecne nutne upravit mezery mezi sekcemi */
 }
 
 .sluzbytlacitka img{
     margin-right:29px;
+    margin-left:20px;
 
 }
+
+p{
+    width:550px;
+}
+
+
+@media(min-width:640px){
+
+.button{
+    margin:10px 10px;
+
+}
+    .buttontraveler{
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        
+      
+    }
+
+}
+
+.sluzbytlacitka{
+    display:flex;
+    flex-direction:row;
+    
+}
+
+.sluzbytlacitka .prvni,
+.sluzbytlacitka .druha,
+.sluzbytlacitka .treti{
+
+    margin-right:20px;
+    
+    height:172px;
+    width:230px;
+}
+
+.sluzbytlacitka .treti{
+    margin-right:0px;
+}
+
+.prvni, .druha,
+.treti{
+
+    flex-direction:column;
+    
+    justify-content:space-between;
+    }
+
+
+    @media(min-width:1100px){
+        .traveler{
+           
+            display:flex;
+            flex-direction:row;
+            
+            
+
+    }}
+
+    .sluzby{
+        display:flex;
+        flex-direction:row;
+    }
